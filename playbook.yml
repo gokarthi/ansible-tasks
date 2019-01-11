@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: true
+  become_user: root
+  tasks: 
+  - name: installing packages
+    copy: src=/root/task.sh dest=/root/task.sh
+  - name: executing the sh file
+    command: sudo sh /root/task.sh
+            
+    
